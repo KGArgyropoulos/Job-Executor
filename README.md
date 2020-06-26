@@ -47,3 +47,9 @@ This is the implemented schema:
 
 ![alt text](https://github.com/KGArgyropoulos/Job-Executor/blob/master/jobExecutor.png)
 
+- jobExecutor.c
+    * bla bla
+- connections.c
+    * bla bla
+    * bla
+
