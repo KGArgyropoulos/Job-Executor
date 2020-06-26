@@ -26,17 +26,17 @@ For every file they find, the result returning to the jobExecutor is the file's 
 If jobExecutor doesn't receive an answer in -deadline- seconds, then prints the user only the responses received before the timeout, with an appropriate message (Only x out of y Workers responded in time).
 - /maxcount keyword\
 Where the user searches for the file that contains the keyword more times than any other.\
-jobExecutor should send the keyword to every Worker and ask them to return the file that contains the keyword most times\
+jobExecutor sends the keyword to every Worker and asks them to return the file that contains the keyword most times\
 After picking up every Worker's maxcount it prints the file with the max(maxcount).\
 In case of equality, the smallest alphabetically full-path is printed.
 - /mincount keyword\
 Same as above, but this time we are interested in the file that contains the keyword less times (BUT AT LEAST ONCE) than any other file.\
-If there's no file containing that word, an appropriate message is printed.\
--/wc
+If there's no file containing that word, an appropriate message is printed.
+- /wc
 Displays to the user the total number of characters(bytes), words and lines from every file the Workers proceed.\
-jobExecutor asks every Worker for these statistics and prints them after calculating their sum.\
--/exit
-jobExecutor should notify the Workers to stop. Before termination, every Worker has written to the folder log/Worker_XXX (XXX: Worker's process id) records in the form below:\
+jobExecutor asks every Worker for these statistics and prints them after calculating their sum.
+- /exit
+jobExecutor notifies the Workers to stop. Before termination, every Worker writes to the folder log/Worker_XXX (XXX: Worker's process id) records in the form below:\
 Time of query arrival : Query type : string : pathname1 : pathname2 : pathname3 : … : pathnameN\
 where pathname1...pathnameN are the paths of the files the string was found in the data set the worker manages.\
 Also, the Worker cleans up any structs he has allocated and notifies the jobExecutor on the total amount of string found in the files.
