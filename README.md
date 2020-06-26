@@ -8,7 +8,8 @@ Job Executor creates Worker processes and together they answer to user queries. 
 # Execution
 - compilation: make minisearch
 - execution: ./jobExecutor –d docfile –w numWorkers
-# where 
+
+where 
 * docfile (or whatever name you decide to give your file) is a simple text file containing file paths to ASCII text files.\
 Each line should contain exaclty one path.
 * numWorkers is the number of workers this app will create.
