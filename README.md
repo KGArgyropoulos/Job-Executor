@@ -43,3 +43,7 @@ Also, the Worker cleans up any structs he has allocated and notifies the jobExec
 
 # Implementation _2
 
+This is the implemented schema:
+
+![alt text](https://github.com/KGArgyropoulos/Job-Executor/blob/master/jobExecutor.png)
+
